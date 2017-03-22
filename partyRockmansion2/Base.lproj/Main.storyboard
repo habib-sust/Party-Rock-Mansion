@@ -108,7 +108,6 @@
                                                 <constraint firstItem="LkM-Ub-n9E" firstAttribute="leading" secondItem="u3U-lr-KfV" secondAttribute="trailing" constant="8" id="x9B-1A-HDc"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.83688528360000003" green="1" blue="0.31484050289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="videoPreviewImage" destination="u3U-lr-KfV" id="9rC-nX-xtp"/>
                                             <outlet property="videoTitleImage" destination="LkM-Ub-n9E" id="a2C-Xs-rjq"/>
@@ -135,11 +134,76 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="RGi-3V-sru" id="DHU-O3-5Ys"/>
+                        <segue destination="o9g-ui-MCk" kind="showDetail" identifier="VideoPlayVC" id="qX4-nV-kXW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="11" y="139"/>
+        </scene>
+        <!--Video PlayVC-->
+        <scene sceneID="xaB-Im-1gf">
+            <objects>
+                <viewController id="o9g-ui-MCk" customClass="VideoPlayVC" customModule="partyRockmansion2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQ7-Bf-d7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bfh-7a-p4P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SDD-mv-QQs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMC-fc-cMR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="EuI-D0-Zoq"/>
+                                </constraints>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4o-gh-zIO">
+                                <rect key="frame" x="66.5" y="262.5" width="187" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="7uX-b1-Z7j"/>
+                                    <constraint firstAttribute="height" constant="43" id="8wr-nn-ETc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13S-3k-EZq">
+                                <rect key="frame" x="129.5" y="358" width="61" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fqK-65-kPK"/>
+                                    <constraint firstAttribute="width" constant="61" id="hwY-jr-Il1"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="0.34305289630000002" blue="0.35540996289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Efd-jK-zzN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z4o-gh-zIO" firstAttribute="centerX" secondItem="SDD-mv-QQs" secondAttribute="centerX" id="3cC-ES-Xyi"/>
+                            <constraint firstItem="13S-3k-EZq" firstAttribute="top" secondItem="z4o-gh-zIO" secondAttribute="bottom" constant="52.5" id="A0g-0y-WJt"/>
+                            <constraint firstItem="bMC-fc-cMR" firstAttribute="top" secondItem="SDD-mv-QQs" secondAttribute="top" id="PUV-8S-KF7"/>
+                            <constraint firstAttribute="trailing" secondItem="bMC-fc-cMR" secondAttribute="trailing" id="knE-ZJ-SB0"/>
+                            <constraint firstItem="13S-3k-EZq" firstAttribute="centerX" secondItem="SDD-mv-QQs" secondAttribute="centerX" id="mlB-62-MpQ"/>
+                            <constraint firstItem="bMC-fc-cMR" firstAttribute="leading" secondItem="SDD-mv-QQs" secondAttribute="leading" id="nIQ-nv-rIp"/>
+                            <constraint firstItem="z4o-gh-zIO" firstAttribute="centerY" secondItem="SDD-mv-QQs" secondAttribute="centerY" id="sbV-xq-UVC"/>
+                            <constraint firstItem="bMC-fc-cMR" firstAttribute="centerX" secondItem="SDD-mv-QQs" secondAttribute="centerX" id="wXg-n5-NYa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoTitle" destination="z4o-gh-zIO" id="eSc-A8-VIH"/>
+                        <outlet property="webView" destination="bMC-fc-cMR" id="Fvd-Kb-JtT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a60-l2-NNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.25" y="139.43661971830986"/>
         </scene>
     </scenes>
     <resources>
