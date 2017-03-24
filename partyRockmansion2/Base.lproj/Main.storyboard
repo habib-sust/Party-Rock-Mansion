@@ -49,9 +49,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E0-d2-JWf">
                                                 <rect key="frame" x="109.5" y="0.0" width="101" height="41"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                                <state key="normal" title="Most Views">
+                                                <state key="normal" title="My Favourite">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="mostViewsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g84-pb-zxd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XN4-L4-QDn">
                                                 <rect key="frame" x="219.5" y="0.0" width="100.5" height="41"/>
@@ -59,6 +62,9 @@
                                                 <state key="normal" title="Events">
                                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="eventsbuttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Fs-EY-k4s"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,11 +141,249 @@
                     <connections>
                         <outlet property="tableView" destination="RGi-3V-sru" id="DHU-O3-5Ys"/>
                         <segue destination="o9g-ui-MCk" kind="showDetail" identifier="VideoPlayVC" id="qX4-nV-kXW"/>
+                        <segue destination="dwJ-Rj-CjN" kind="showDetail" identifier="EventVC" id="61O-hi-m9l"/>
+                        <segue destination="Ape-pF-7MA" kind="showDetail" identifier="MostViewVC" id="tnm-re-iY8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11" y="139"/>
+            <point key="canvasLocation" x="-101" y="393"/>
+        </scene>
+        <!--Most ViewVC-->
+        <scene sceneID="wA7-nk-ByY">
+            <objects>
+                <viewController id="Ape-pF-7MA" customClass="MostViewVC" customModule="partyRockmansion2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="szd-JR-LYp"/>
+                        <viewControllerLayoutGuide type="bottom" id="1aC-IQ-1qS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZkF-vx-xi4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="2Xl-V8-xx4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1vT-BL-nns"/>
+                                    <constraint firstAttribute="width" constant="320" id="zzS-lF-vTV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NuF-E3-AT3">
+                                <rect key="frame" x="0.0" y="150" width="320" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iYF-ag-BU9">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtY-KE-jO0">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="topViewsButtonPressed:" destination="Ape-pF-7MA" eventType="touchUpInside" id="GUc-hM-ehy"/>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MainVC" id="DEB-Ds-9BX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4h-14-9fM">
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="My Favourite">
+                                                    <color key="titleColor" red="0.8116287298" green="0.11160288390000001" blue="0.91197950019999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu2-EY-RQW">
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="eventsButtonPressed:" destination="Ape-pF-7MA" eventType="touchUpInside" id="WSm-rn-YQh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.82786356750000001" green="0.82786356750000001" blue="0.82786356750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="iYF-ag-BU9" firstAttribute="leading" secondItem="NuF-E3-AT3" secondAttribute="leading" id="2i2-js-CDe"/>
+                                    <constraint firstAttribute="bottom" secondItem="iYF-ag-BU9" secondAttribute="bottom" id="GEY-yp-Gd9"/>
+                                    <constraint firstAttribute="height" constant="41" id="Xge-uK-WDU"/>
+                                    <constraint firstItem="iYF-ag-BU9" firstAttribute="top" secondItem="NuF-E3-AT3" secondAttribute="top" id="boC-Sk-8eG"/>
+                                    <constraint firstAttribute="width" constant="320" id="doh-Hf-Oea"/>
+                                    <constraint firstAttribute="trailing" secondItem="iYF-ag-BU9" secondAttribute="trailing" id="zMi-z4-J66"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-ro-Aa9">
+                                <rect key="frame" x="0.0" y="191" width="320" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MostViewCell" rowHeight="70" id="OAu-qi-5cm" customClass="MostViewCell" customModule="partyRockmansion2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OAu-qi-5cm" id="uKH-hG-wLq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="zsk-fQ-Y3N">
+                                                    <rect key="frame" x="8" y="7" width="72" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="TDD-8z-ukg"/>
+                                                        <constraint firstAttribute="height" constant="55" id="gWA-1M-bQ0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow Brick Road" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwa-60-RzQ">
+                                                    <rect key="frame" x="88" y="12" width="215" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="pqx-ay-hlg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zsk-fQ-Y3N" firstAttribute="centerY" secondItem="uKH-hG-wLq" secondAttribute="centerY" id="2en-3P-SY5"/>
+                                                <constraint firstItem="nwa-60-RzQ" firstAttribute="centerY" secondItem="uKH-hG-wLq" secondAttribute="centerY" id="bXP-Mh-kwH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nwa-60-RzQ" secondAttribute="trailing" constant="9" id="e7K-kd-7JG"/>
+                                                <constraint firstItem="zsk-fQ-Y3N" firstAttribute="leading" secondItem="uKH-hG-wLq" secondAttribute="leading" constant="8" id="i97-gf-CTM"/>
+                                                <constraint firstItem="nwa-60-RzQ" firstAttribute="leading" secondItem="zsk-fQ-Y3N" secondAttribute="trailing" constant="8" id="sWJ-vG-BGt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mostViewImagePreview" destination="zsk-fQ-Y3N" id="rbF-dd-zlr"/>
+                                            <outlet property="mostViewSongTitle" destination="nwa-60-RzQ" id="tcp-7d-Dle"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Xl-V8-xx4" firstAttribute="top" secondItem="ZkF-vx-xi4" secondAttribute="topMargin" id="15N-FQ-BAo"/>
+                            <constraint firstAttribute="trailing" secondItem="AtV-ro-Aa9" secondAttribute="trailing" id="57Q-za-2Qh"/>
+                            <constraint firstItem="AtV-ro-Aa9" firstAttribute="leading" secondItem="ZkF-vx-xi4" secondAttribute="leading" id="BZK-fu-sEj"/>
+                            <constraint firstItem="NuF-E3-AT3" firstAttribute="top" secondItem="2Xl-V8-xx4" secondAttribute="bottom" id="I6U-2s-xFr"/>
+                            <constraint firstItem="NuF-E3-AT3" firstAttribute="centerX" secondItem="ZkF-vx-xi4" secondAttribute="centerX" id="SLG-ql-3ze"/>
+                            <constraint firstItem="1aC-IQ-1qS" firstAttribute="top" secondItem="AtV-ro-Aa9" secondAttribute="bottom" id="TaS-kR-etl"/>
+                            <constraint firstItem="2Xl-V8-xx4" firstAttribute="centerX" secondItem="ZkF-vx-xi4" secondAttribute="centerX" id="dII-6w-SUk"/>
+                            <constraint firstItem="AtV-ro-Aa9" firstAttribute="top" secondItem="NuF-E3-AT3" secondAttribute="bottom" id="xkP-Lb-TUb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="AtV-ro-Aa9" id="dK2-BH-rVk"/>
+                        <segue destination="o9g-ui-MCk" kind="showDetail" identifier="VideoPlayVC" id="BCX-gs-4d0"/>
+                        <segue destination="dwJ-Rj-CjN" kind="showDetail" identifier="EventVC" id="o8U-SP-rsW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AY5-2g-te4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-133"/>
+        </scene>
+        <!--EventVC-->
+        <scene sceneID="tQf-DJ-TAJ">
+            <objects>
+                <viewController id="dwJ-Rj-CjN" customClass="EventVC" customModule="partyRockmansion2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5QL-3h-w4o"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gjp-1F-jwE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yjx-IX-OjP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="XZf-dA-6lL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="aeW-I2-T5u"/>
+                                    <constraint firstAttribute="width" constant="320" id="iLT-iW-F77"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zno-ck-lIf">
+                                <rect key="frame" x="0.0" y="150" width="320" height="41"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-6z-Ave">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz5-AS-O3k">
+                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="topVideosButtonPressed:" destination="dwJ-Rj-CjN" eventType="touchUpInside" id="tBt-bp-nRZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLt-Jw-Czp">
+                                                <rect key="frame" x="107.5" y="0.0" width="105" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="My Favourite">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="myfavouriteButtonPressed:" destination="dwJ-Rj-CjN" eventType="touchUpInside" id="P2E-7x-YbN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9n-5A-8aB">
+                                                <rect key="frame" x="215.5" y="0.0" width="104.5" height="41"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" red="0.8116287298" green="0.11160288390000001" blue="0.91197950019999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91197950019999996" green="0.90373365510000003" blue="0.90151851100000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="X7h-6z-Ave" firstAttribute="leading" secondItem="zno-ck-lIf" secondAttribute="leading" id="LBL-bh-ogL"/>
+                                    <constraint firstAttribute="width" constant="320" id="M0w-HT-mmE"/>
+                                    <constraint firstItem="X7h-6z-Ave" firstAttribute="top" secondItem="zno-ck-lIf" secondAttribute="top" id="R4w-O2-BGr"/>
+                                    <constraint firstAttribute="trailing" secondItem="X7h-6z-Ave" secondAttribute="trailing" id="TR1-e6-jwi"/>
+                                    <constraint firstAttribute="height" constant="41" id="WEc-Co-tyW"/>
+                                    <constraint firstAttribute="bottom" secondItem="X7h-6z-Ave" secondAttribute="bottom" id="pp7-lI-fov"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meghdol" translatesAutoresizingMaskIntoConstraints="NO" id="rIn-61-7o1">
+                                <rect key="frame" x="0.0" y="191" width="320" height="377"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4E-0r-g6T">
+                                <rect key="frame" x="20" y="288" width="280" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="JeR-8b-w4j"/>
+                                    <constraint firstAttribute="height" constant="183" id="SO0-vZ-2yE"/>
+                                </constraints>
+                                <string key="text">মেঘদলের গান
+শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ে, ১ এপ্রিল।</string>
+                                <fontDescription key="fontDescription" name="Avenir-BlackOblique" family="Avenir" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zno-ck-lIf" firstAttribute="centerX" secondItem="yjx-IX-OjP" secondAttribute="centerX" id="9js-rZ-HBm"/>
+                            <constraint firstAttribute="trailing" secondItem="rIn-61-7o1" secondAttribute="trailing" id="AxD-pS-6y2"/>
+                            <constraint firstItem="Gjp-1F-jwE" firstAttribute="top" secondItem="rIn-61-7o1" secondAttribute="bottom" id="Ear-fU-UvI"/>
+                            <constraint firstItem="rIn-61-7o1" firstAttribute="top" secondItem="zno-ck-lIf" secondAttribute="bottom" id="KgX-u3-3UF"/>
+                            <constraint firstItem="rIn-61-7o1" firstAttribute="leading" secondItem="yjx-IX-OjP" secondAttribute="leading" id="TS2-8B-O4w"/>
+                            <constraint firstItem="e4E-0r-g6T" firstAttribute="centerY" secondItem="rIn-61-7o1" secondAttribute="centerY" id="XTQ-n5-JGl"/>
+                            <constraint firstItem="e4E-0r-g6T" firstAttribute="centerX" secondItem="rIn-61-7o1" secondAttribute="centerX" id="Z4o-Sj-aJe"/>
+                            <constraint firstItem="zno-ck-lIf" firstAttribute="top" secondItem="XZf-dA-6lL" secondAttribute="bottom" id="fWH-s0-HpG"/>
+                            <constraint firstItem="XZf-dA-6lL" firstAttribute="top" secondItem="yjx-IX-OjP" secondAttribute="top" id="p75-N8-uST"/>
+                            <constraint firstItem="XZf-dA-6lL" firstAttribute="centerX" secondItem="yjx-IX-OjP" secondAttribute="centerX" id="wBb-9p-CLw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Ape-pF-7MA" kind="showDetail" identifier="MostViewVC" id="ZBF-AU-bQb"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="MainVC" id="mcG-B2-C3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSr-RN-y85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="-76"/>
         </scene>
         <!--Video PlayVC-->
         <scene sceneID="xaB-Im-1gf">
@@ -180,7 +424,8 @@
                                     <color key="titleColor" red="1" green="0.34305289630000002" blue="0.35540996289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Efd-jK-zzN"/>
+                                    <action selector="BackButtonPressed:" destination="o9g-ui-MCk" eventType="touchUpInside" id="lDb-TB-cy2"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="MainVC" id="Efd-jK-zzN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -203,10 +448,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a60-l2-NNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="776.25" y="139.43661971830986"/>
+            <point key="canvasLocation" x="1170" y="619"/>
         </scene>
     </scenes>
     <resources>
+        <image name="meghdol" width="1280" height="720"/>
         <image name="partybanner" width="610" height="297"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DEB-Ds-9BX"/>
+        <segue reference="ZBF-AU-bQb"/>
+        <segue reference="o8U-SP-rsW"/>
+        <segue reference="BCX-gs-4d0"/>
+    </inferredMetricsTieBreakers>
 </document>

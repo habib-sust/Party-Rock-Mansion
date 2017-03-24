@@ -15,6 +15,9 @@
 		7B341D0E1E79C00300CB34E5 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B341D0D1E79C00300CB34E5 /* still time.ttf */; };
 		7B341D101E79C31000CB34E5 /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B341D0F1E79C31000CB34E5 /* PartyCell.swift */; };
 		7B341D121E79C43400CB34E5 /* PartyRock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B341D111E79C43400CB34E5 /* PartyRock.swift */; };
+		7B58DD1A1E8470B40050133F /* MostViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58DD191E8470B40050133F /* MostViewVC.swift */; };
+		7B58DD1E1E8475370050133F /* MostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58DD1D1E8475370050133F /* MostViewCell.swift */; };
+		7B58DD201E8488F60050133F /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58DD1F1E8488F60050133F /* EventVC.swift */; };
 		7BD293A31E7AA17000ACAEC4 /* VideoPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD293A21E7AA17000ACAEC4 /* VideoPlayVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		7B341D0D1E79C00300CB34E5 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 		7B341D0F1E79C31000CB34E5 /* PartyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
 		7B341D111E79C43400CB34E5 /* PartyRock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyRock.swift; sourceTree = "<group>"; };
+		7B58DD191E8470B40050133F /* MostViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostViewVC.swift; sourceTree = "<group>"; };
+		7B58DD1D1E8475370050133F /* MostViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MostViewCell.swift; sourceTree = "<group>"; };
+		7B58DD1F1E8488F60050133F /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		7BD293A21E7AA17000ACAEC4 /* VideoPlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7B341D0F1E79C31000CB34E5 /* PartyCell.swift */,
+				7B58DD1D1E8475370050133F /* MostViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -96,6 +103,8 @@
 			children = (
 				7B341CF91E79B90500CB34E5 /* MainVC.swift */,
 				7BD293A21E7AA17000ACAEC4 /* VideoPlayVC.swift */,
+				7B58DD191E8470B40050133F /* MostViewVC.swift */,
+				7B58DD1F1E8488F60050133F /* EventVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,7 +193,10 @@
 			files = (
 				7B341CFA1E79B90500CB34E5 /* MainVC.swift in Sources */,
 				7B341D121E79C43400CB34E5 /* PartyRock.swift in Sources */,
+				7B58DD1A1E8470B40050133F /* MostViewVC.swift in Sources */,
+				7B58DD201E8488F60050133F /* EventVC.swift in Sources */,
 				7B341CF81E79B90500CB34E5 /* AppDelegate.swift in Sources */,
+				7B58DD1E1E8475370050133F /* MostViewCell.swift in Sources */,
 				7B341D101E79C31000CB34E5 /* PartyCell.swift in Sources */,
 				7BD293A31E7AA17000ACAEC4 /* VideoPlayVC.swift in Sources */,
 			);

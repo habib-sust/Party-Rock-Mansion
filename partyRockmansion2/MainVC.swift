@@ -74,6 +74,17 @@ class MainVC: UIViewController , UITableViewDataSource , UITableViewDelegate{
             }
         }
     }
+    
+    
+    @IBAction func mostViewsButtonPressed(_ sender: Any) {
+        
+        performSegue(withIdentifier: "MostViewVC", sender: nil)
+    }
+    
+    @IBAction func eventsbuttonPressed(_ sender: Any) {
+        
+       performSegue(withIdentifier: "EventVC", sender: nil)
+    }
 
 }
 
